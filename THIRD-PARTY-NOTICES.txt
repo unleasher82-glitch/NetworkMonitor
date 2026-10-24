@@ -1,0 +1,53 @@
+Network Monitor — third-party notices
+=====================================
+
+Network Monitor includes or depends on the following components.
+
+SharpPcap — MIT License
+  https://github.com/dotpcap/sharppcap
+  Copyright (c) 2005-2024 SharpPcap contributors
+
+PacketDotNet (dependency of SharpPcap) — Mozilla Public License 2.0
+  https://github.com/dotpcap/packetnet
+
+MaxMind.Db — Apache License 2.0
+  https://github.com/maxmind/MaxMind-DB-Reader-dotnet
+  Copyright (c) 2013-2024 MaxMind, Inc.
+
+Microsoft.Web.WebView2 — Microsoft WebView2 SDK license
+  https://www.nuget.org/packages/Microsoft.Web.WebView2
+
+.NET runtime — MIT License
+  https://github.com/dotnet/runtime
+
+flag-icons 7.2.3 (country flag images in ui\flags) — MIT License
+  https://github.com/lipis/flag-icons
+  Copyright (c) 2013 Panayiotis Lipiridis
+
+Fira Sans and Fira Code fonts (ui\fonts, used by the Ops Glass theme) — SIL Open Font License 1.1
+  Fira Sans: https://github.com/mozilla/Fira — Copyright (c) 2012-2015, The Mozilla Foundation and Telefonica S.A.
+  Fira Code: https://github.com/tonsky/FiraCode — Copyright 2014-2020 The Fira Code Project Authors
+  Font files from the Fontsource packages 5.3.0; the full licence texts are in ui\fonts\OFL-*.txt.
+
+DB-IP Lite country and ASN databases, October 2026 (geo\*.mmdb) — CC BY 4.0
+  IP Geolocation by DB-IP — https://db-ip.com
+  Licensed under Creative Commons Attribution 4.0 International,
+  https://creativecommons.org/licenses/by/4.0/
+  Used when no location database of your own is chosen in Settings. The files
+  are included unmodified (renamed).
+
+Not included (installed separately by the user)
+-----------------------------------------------
+Npcap — the packet capture driver used for live capture. Npcap is free for
+personal use; its licence does not allow redistribution without an OEM
+licence, so Network Monitor links to https://npcap.com instead of bundling it.
+
+Other location databases (.mmdb) — Settings can point at MaxMind GeoLite2,
+DB-IP or IPinfo Lite databases instead of the built-in ones, under those
+providers' own licences and attribution terms.
+
+Design reference
+----------------
+The feature set follows the open-source Sniffnet project
+(https://github.com/GyulyVGC/sniffnet, MIT / Apache-2.0). Network Monitor is
+a separate implementation and contains no Sniffnet source code.
