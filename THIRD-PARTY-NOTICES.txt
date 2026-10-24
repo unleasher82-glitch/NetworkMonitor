@@ -1,7 +1,9 @@
 Network Monitor — third-party notices
 =====================================
 
-Network Monitor includes or depends on the following components.
+Network Monitor itself is licensed under the MIT License, Copyright (c) 2026
+Mohammad Ali (see LICENSE.txt). It includes or depends on the following
+components, each under its own licence.
 
 SharpPcap — MIT License
   https://github.com/dotpcap/sharppcap
