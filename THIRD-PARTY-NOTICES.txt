@@ -31,6 +31,15 @@ Fira Sans and Fira Code fonts (ui\fonts, used by the Ops Glass theme) — SIL Op
   Fira Code: https://github.com/tonsky/FiraCode — Copyright 2014-2020 The Fira Code Project Authors
   Font files from the Fontsource packages 5.3.0; the full licence texts are in ui\fonts\OFL-*.txt.
 
+Fonts for the 1.0.3 themes (ui\fonts) — SIL Open Font License 1.1
+  Public Sans: https://github.com/uswds/public-sans — Copyright 2015 The Public Sans Project Authors
+  JetBrains Mono: https://github.com/JetBrains/JetBrainsMono — Copyright 2020 The JetBrains Mono Project Authors
+  IBM Plex Sans and IBM Plex Mono: https://github.com/IBM/plex — Copyright 2017-2019 IBM Corp.
+  Geist and Geist Mono: https://github.com/vercel/geist-font — Copyright 2023 Vercel, in collaboration with basement.studio
+  Outfit: https://github.com/Outfitio/Outfit-Fonts — Copyright 2021 The Outfit Project Authors
+  Work Sans: https://github.com/weiweihuanghuang/Work-Sans — Copyright 2019 The Work Sans Project Authors
+  Font files from the Fontsource packages 5.3.0 (Latin subset); the full licence texts are in ui\fonts\OFL-*.txt.
+
 DB-IP Lite country and ASN databases, October 2026 (geo\*.mmdb) — CC BY 4.0
   IP Geolocation by DB-IP — https://db-ip.com
   Licensed under Creative Commons Attribution 4.0 International,
