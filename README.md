@@ -6,29 +6,56 @@ By Mohammad Ali.
 
 ## Download
 
-Get **NetworkMonitor-1.0.3-x64.msi** from the [Releases](../../releases) page and run it. It replaces any earlier 1.0.x.
+Get **NetworkMonitor-1.0.4-x64.msi** from the [Releases](../../releases) page and run it. It replaces any earlier 1.0.x and keeps your settings.
 
 - Windows 10 or 11, 64-bit.
 - Live capture needs the free [Npcap](https://npcap.com) driver. The installer offers to download it; saved `.pcap` / `.pcapng` files open without it.
 - The installer is not code-signed yet, so Windows SmartScreen may warn before it runs.
 
-SHA-256 of `NetworkMonitor-1.0.3-x64.msi`:
+SHA-256 of `NetworkMonitor-1.0.4-x64.msi`:
 
 ```
-68EC73E34CE9883440CF34714596C6639B740D4B0429B29385B3D9604DA2F462
+B6366F8638E966EAD44C47CA6C8E52225A96BF7CD474CA89B57B171463673D34
 ```
 
 ## What it does
 
 - **Overview:** live traffic chart, totals, and the busiest hosts (with country flag and network owner), services and programs.
-- **Inspect:** every connection, with filters for address, port, country, service, program and direction.
+- **Inspect:** every connection, with filters for address, port, country, service, program and direction, and a switch to show or hide Windows services.
 - **App connectivity:** follows each connection through name lookup, Windows Firewall, connect, proxy and HTTPS, shows where it stops and what to do about it, and copies a report for IT.
 - **Notifications:** data thresholds, favourite hosts, an IP blacklist, app connection failures, optional webhook. Each type can pop up or just be recorded.
 - Pause and resume, thumbnail mode, English and Arabic (right-to-left), 13 themes.
 
 All analysis happens on your PC. There is no telemetry and no account.
 
-## What's new in 1.0.3
+## What's new in 1.0.4
+
+### New feature: Show Windows services
+
+Inspect and App connectivity have a new **Show Windows services** switch. Turn it off to hide svchost.exe and the other Windows system programs, so the lists show only your own apps. The switch says how many entries it is hiding, it works the same on both pages, and your choice is remembered. Totals, the chart and notifications still count everything.
+
+![Show Windows services switch on the Inspect page](docs/screenshots/show-windows-services.png)
+
+### Fixed
+
+| Problem | Fixed in 1.0.4 |
+|---|---|
+| Network Monitor listed itself in App connectivity as an app with failing name lookups. | It now looks up host names in a way that doesn't create those failures, and it leaves its own lookups out of the list. |
+| On the start page, with export turned on, the Browse… button could sit behind the file name box. | The folder box, Browse… and the file name now fit side by side at every window size. |
+
+### Security hardening
+
+A security review of 1.0.3 found no confirmed vulnerability, but ten places that could be made safer. All ten are addressed in 1.0.4. Most of them concern **Restart as administrator**: they stop another program running on your PC from using the administrator window to change protected files.
+
+- **Settings and exports as administrator:** they are never written through redirected (linked) folders.
+- **Npcap download:** the installer runs from a folder that other programs can't add files to, and it must be the version npcap.com offers, not an older one.
+- **Install folder:** if you install somewhere other than Program Files, the folder now gets the same protection as Program Files.
+- **Administrator window:** it ignores developer and browser settings that a normal program could change.
+- **Report for IT:** names received from the network can no longer add fake lines to the report.
+- **Capture files:** a specially made capture file can no longer make memory use grow without limit.
+
+<details>
+<summary>What was new in 1.0.3</summary>
 
 ### New
 
@@ -56,9 +83,11 @@ All analysis happens on your PC. There is no telemetry and no account.
 | App connectivity: large counts overflowed the route circles. | Counts are shortened (20k, 1.4M), with the full number on hover. |
 | App connectivity: the summary listed every affected app and became hard to read. | It names the top 3 apps and "and N more". |
 
+</details>
+
 ## Screenshots
 
-Version 1.0.3 running on sample traffic.
+Network Monitor running on sample traffic.
 
 **Overview:** traffic chart, totals, top hosts, services and programs.
 
