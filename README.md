@@ -70,7 +70,7 @@ Inspect and App connectivity have a new **Show Windows services** switch. Turn i
 
 ### Security hardening
 
-A security review of 1.0.3 found no confirmed vulnerability, but ten places that could be made safer. All ten are addressed in 1.0.4. Most of them concern **Restart as administrator**: they stop another program running on your PC from using the administrator window to change protected files.
+A security review found no confirmed vulnerability, but ten places that could be made safer. All ten are addressed in 1.0.4. Most of them concern **Restart as administrator**: they stop another program running on your PC from using the administrator window to change protected files.
 
 - **Settings and exports as administrator:** they are never written through redirected (linked) folders.
 - **Npcap download:** the installer runs from a folder that other programs can't add files to, and it must be the version npcap.com offers, not an older one.
@@ -78,37 +78,6 @@ A security review of 1.0.3 found no confirmed vulnerability, but ten places that
 - **Administrator window:** it ignores developer and browser settings that a normal program could change.
 - **Report for IT:** names received from the network can no longer add fake lines to the report.
 - **Capture files:** a specially made capture file can no longer make memory use grow without limit.
-
-<details>
-<summary>What was new in 1.0.3</summary>
-
-### New
-
-- **Five new themes:** Live Terminal, Framed Sheet, Quiet Ledger, Raw Packet and Home Helper, each with its own fonts and shapes.
-- **Pop-up per notification type:** choose for each type whether it pops up or is only recorded on the Notifications page.
-- **Security hardening:** exports can't be redirected through links or junctions, webhooks don't follow redirects, and input from the interface is size-checked.
-
-### Fixed
-
-1.0.3 was tested for long runs, heavy traffic, large and damaged capture files, network changes, sleep and administrator use. These problems were found and fixed:
-
-| Problem | Fixed in 1.0.3 |
-|---|---|
-| After many hours of capturing, the window could run out of memory and show a blank "page is having a problem" screen. | The window reloads itself within a second and keeps the running capture and your settings. Capturing never stops. A message says the view was reset. |
-| Memory kept growing during long sessions. | Connections idle for 30 minutes are removed from the lists. Their traffic stays in the totals. |
-| The interface slowed down as the number of connections grew. | Updates take about a quarter of the time they did on large sessions. |
-| Under very heavy traffic (tens of thousands of new connections a second), the display fell behind. | The display keeps up in real time and uses less memory. |
-| Updates could arrive late or bunched, and the chart was wrong after the PC slept. | Updates arrive every second without drift; sleep shows as a gap in the chart. |
-| A large IP blacklist could stop settings from saving, without telling you. | The blacklist is stored in its own file, and you're told if anything can't be saved. |
-| A failure storm could produce thousands of notifications a minute. | At most one pop-up per type every 5 seconds; the rest are combined into one ("12 more connection failures"). |
-| Exporting to a .pcap file grew one file without limit until the disk filled. | A new file is started every 500 MB, and the export stops with a message when less than 1 GB is free. |
-| A capture file cut off in the middle was replayed without warning. | You're told the file ends mid-packet and how many packets were read. |
-| Running as administrator left a temporary browser profile (up to 45 MB) behind. | It's deleted when the app closes. |
-| App connectivity: clicking the **Server** stop didn't filter the list. | It now shows the destinations that worked. |
-| App connectivity: large counts overflowed the route circles. | Counts are shortened (20k, 1.4M), with the full number on hover. |
-| App connectivity: the summary listed every affected app and became hard to read. | It names the top 3 apps and "and N more". |
-
-</details>
 
 ## Screenshots
 

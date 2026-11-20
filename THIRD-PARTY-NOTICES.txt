@@ -31,7 +31,7 @@ Fira Sans and Fira Code fonts (ui\fonts, used by the Ops Glass theme) — SIL Op
   Fira Code: https://github.com/tonsky/FiraCode — Copyright 2014-2020 The Fira Code Project Authors
   Font files from the Fontsource packages 5.3.0; the full licence texts are in ui\fonts\OFL-*.txt.
 
-Fonts for the 1.0.3 themes (ui\fonts) — SIL Open Font License 1.1
+Fonts for the themes (ui\fonts) — SIL Open Font License 1.1
   Public Sans: https://github.com/uswds/public-sans — Copyright 2015 The Public Sans Project Authors
   JetBrains Mono: https://github.com/JetBrains/JetBrainsMono — Copyright 2020 The JetBrains Mono Project Authors
   IBM Plex Sans and IBM Plex Mono: https://github.com/IBM/plex — Copyright 2017-2019 IBM Corp.
