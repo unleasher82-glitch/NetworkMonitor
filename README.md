@@ -1,10 +1,12 @@
 # Network Monitor
 
-A Windows desktop app that shows what your PC is talking to on the network, and why an app can't connect.
+A desktop app for Windows and macOS that shows what your computer is talking to on the network, and why an app can't connect.
 
 By Mohammad Ali.
 
 ## Download
+
+### Windows
 
 Get **NetworkMonitor-1.0.4-x64.msi** from the [Releases](../../releases) page and run it. It replaces any earlier 1.0.x and keeps your settings.
 
@@ -18,6 +20,27 @@ SHA-256 of `NetworkMonitor-1.0.4-x64.msi`:
 B6366F8638E966EAD44C47CA6C8E52225A96BF7CD474CA89B57B171463673D34
 ```
 
+### macOS
+
+Get the installer for your Mac from the **Network Monitor 1.0.4 for macOS** release on the [Releases](../../releases) page:
+
+- **NetworkMonitor-1.0.4-macOS-AppleSilicon.pkg** for Macs with an M1 chip or later
+- **NetworkMonitor-1.0.4-macOS-Intel.pkg** for Intel Macs
+
+Notes:
+
+- macOS 13 Ventura or later. The app is installed in Applications.
+- The installer isn't notarised by Apple yet, so macOS may refuse to open it at first. Control-click the .pkg and choose **Open**, or allow it in System Settings → Privacy & Security.
+- On first start, allow **Network Monitor** in System Settings → General → Login Items. Its small helper lets the app capture without an administrator password and name the program behind each connection; Settings → General can remove it again. Saved `.pcap` / `.pcapng` files open without it.
+- This is the first macOS build. It was tested on an Apple Silicon Mac; the Intel build hasn't been tried on an Intel Mac yet.
+
+SHA-256:
+
+```
+12BF442C00D7E68A601B0C0E2B3BA1F6B0191A47951E15F6B24E555920DE8A6F  NetworkMonitor-1.0.4-macOS-AppleSilicon.pkg
+DE92E0E920D25741D8D71931C03173312C0F1F7A15F9F9D50D09F6F4E9ADAF42  NetworkMonitor-1.0.4-macOS-Intel.pkg
+```
+
 ## What it does
 
 - **Overview:** live traffic chart, totals, and the busiest hosts (with country flag and network owner), services and programs.
@@ -26,7 +49,9 @@ B6366F8638E966EAD44C47CA6C8E52225A96BF7CD474CA89B57B171463673D34
 - **Notifications:** data thresholds, favourite hosts, an IP blacklist, app connection failures, optional webhook. Each type can pop up or just be recorded.
 - Pause and resume, thumbnail mode, English and Arabic (right-to-left), 13 themes.
 
-All analysis happens on your PC. There is no telemetry and no account.
+All analysis happens on your computer. There is no telemetry and no account.
+
+**On macOS** the screens, languages and themes are the same. The differences: a **Show system services** switch hides macOS's own background programs; the firewall step shows the macOS firewall's setting (it doesn't log each block); a menu-bar icon takes the place of the tray icon; notifications go to Notification Center; and shortcuts use ⌘.
 
 ## What's new in 1.0.4
 
